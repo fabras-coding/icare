@@ -3,3 +3,17 @@
 ################################################################################
 
 /iCare/.vs
+/iCare/iCare.Application.Core/bin/Debug
+/iCare/iCare.Application.Core/obj
+/iCare/iCare.Application.Service/bin/Debug
+/iCare/iCare.Application.Service/obj
+/iCare/iCare.Domain.Entities/bin/Debug
+/iCare/iCare.Domain.Entities/obj
+/iCare/iCare.Infrastructure.Data/bin/Debug
+/iCare/iCare.Infrastructure.Data/obj/Debug
+/iCare/iCare.Tests/bin/Debug
+/iCare/iCare.Tests/obj
+/iCare/packages
+/iCare/iCare.Presentation.MVC/bin
+/iCare/iCare.Presentation.MVC/obj
+/.vs
