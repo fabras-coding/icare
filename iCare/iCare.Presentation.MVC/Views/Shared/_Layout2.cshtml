@@ -1,0 +1,393 @@
+﻿
+	<html lang="zxx" class="no-js" style="display: block;">
+	<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link rel="shortcut icon" href="img/fav.png">
+
+		<meta name="author" content="colorlib">
+
+		<meta name="description" content="">
+
+		<meta name="keywords" content="">
+
+		<meta charset="UTF-8">
+
+		<title>iCare</title>
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+		<link href="~/Content/linearicons.css" rel="stylesheet" />
+		<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+		<link href="~/Content/bootstrap.css" rel="stylesheet" />
+		<link href="~/Content/magnific-popup.css" rel="stylesheet" />
+		<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+		<link href="~/Content/nice-select.css" rel="stylesheet" />
+		<link href="~/Content/animate.min.css" rel="stylesheet" />
+		<link href="~/Content/owl.carousel.css" rel="stylesheet" />
+		<link href="~/Content/main.css" rel="stylesheet" />
+
+		@*<link rel="stylesheet" href="css/linearicons.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link href="~/Content/jquery-ui.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/magnific-popup.css">
+		<link rel="stylesheet" href="css/jquery-ui.css">
+		<link rel="stylesheet" href="css/nice-select.css">
+		<link rel="stylesheet" href="css/animate.min.css">
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/jquery-ui.css">
+		<link rel="stylesheet" href="css/main.css">*@
+		<script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/38/2/intl/pt_br/common.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/38/2/intl/pt_br/util.js"></script>
+	</head>
+	<body style="display: block;">
+		<button type="button" id="mobile-nav-toggle"><i class="lnr lnr-menu"></i></button>
+		<header id="header">
+			<div class="header-top">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-6 col-sm-6 col-4 header-top-left">
+							<a href="tel:+55 11 99999-9999"><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">+55 11 99999-9999</span></span></a>
+							<a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">contato@icare.com.br</span></span></a>
+						</div>
+						<div class="col-lg-6 col-sm-6 col-8 header-top-right">
+							<a href="#cadastro" class="primary-btn text-uppercase">Seja um cuidador!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container main-menu">
+				<div class="row align-items-center justify-content-between d-flex">
+					<div id="logo">
+						<a href="index.html"><img src="img/logo.png" alt="" title=""></a>
+					</div>
+					<nav id="nav-menu-container">
+						<ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+							<li><a  href="#home">Home</a></li>
+							<li><a href="#cadastro">Cadastro</a></li>
+							<li><a href="#atendimento">Atendimento</a></li>
+							<li><a href="#cuidadores">Cuidadores</a></li>
+							<li><a href="#contato">Contato</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+
+		<section class="banner-area relative" id="home">
+			<div class="overlay overlay-bg" id="ourpurpose"></div>
+			<div class="container">
+				<div class="row fullscreen d-flex align-items-center justify-content-center" style="height: 920px;">
+					<div class="banner-content col-lg-8 col-md-12">
+						<h1>
+							Nós cuidamos da sua saúde
+							Em Todos os Momentos
+						</h1>
+						<p class="pt-10 pb-10 text-white">
+							Conecte-se com profissionais capacidados para cuidarem de você! Se você é um cuidador, pode fazer parte do nosso time e cuidar de alguém também.
+						</p>
+						<a href="#atendimento" class="primary-btn text-uppercase">Atendimento</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		@RenderBody()
+
+		<section class="appointment-area" id="cadastro">
+			<div class="container">
+				<div class="row justify-content-between align-items-center pb-120 appointment-wrap">
+					<div class="col-lg-5 col-md-6 appointment-left">
+						<h1>
+							Servicing Hours
+						</h1>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						</p>
+						<ul class="time-list">
+							<li class="d-flex justify-content-between">
+								<span>Monday-Friday</span>
+								<span>08.00 am - 10.00 pm</span>
+							</li>
+							<li class="d-flex justify-content-between">
+								<span>Saturday</span>
+								<span>08.00 am - 10.00 pm</span>
+							</li>
+							<li class="d-flex justify-content-between">
+								<span>Sunday</span>
+								<span>08.00 am - 10.00 pm</span>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-6 col-md-6 appointment-right pt-60 pb-60" style="margin-top: 10px;">
+						<form class="form-wrap" action="#">
+							<h3 class="pb-20 text-center mb-30">Book an Appointment</h3>
+							<input type="text" class="form-control" name="name" placeholder="Patient Name" onfocus="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = ''" onblur="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = 'Patient Name'">
+							<input type="text" class="form-control" name="phone" placeholder="Phone " onfocus="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = ''" onblur="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = 'Phone'">
+							<input type="email" class="form-control" name="email" placeholder="Email Address" onfocus="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = ''" onblur="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = 'Email Address'">
+							<input id="datepicker1" name="dop" class="dates form-control hasDatepicker" placeholder="Date of Birth" type="text">
+							<div class="form-select" id="service-select">
+								<select style="display: none;">
+									<option data-display="">Disease Type</option>
+									<option value="1">Type One</option>
+									<option value="2">Type Two</option>
+									<option value="3">Type Three</option>
+									<option value="4">Type Four</option>
+								</select><div class="nice-select" tabindex="0"><span class="current">Disease Type</span><ul class="list"><li data-value="Disease Type" class="option selected">Disease Type</li><li data-value="1" class="option">Type One</li><li data-value="2" class="option">Type Two</li><li data-value="3" class="option">Type Three</li><li data-value="4" class="option">Type Four</li></ul></div>
+							</div>
+							<input id="datepicker2" class="dates form-control hasDatepicker" placeholder="appointment Date" type="text">
+<textarea name="messege" class="" rows="5" placeholder="Messege" onfocus="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = ''" onblur="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = 'Messege'"></textarea>
+							<button class="primary-btn text-uppercase">Confirm Booking</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="facilities-area section-gap" id="atendimento">
+			<div class="container">
+				<div class="row d-flex justify-content-center">
+					<div class="menu-content pb-70 col-lg-7">
+						<div class="title text-center">
+							<h1 class="mb-10">Atendimento</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-3 col-md-6">
+						<div class="single-facilities">
+							<span class="lnr lnr-rocket"></span>
+							<a href="#"><h4>24/7 Emergency</h4></a>
+							<p>
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="single-facilities">
+							<span class="lnr lnr-heart"></span>
+							<a href="#"><h4>24/7 Emergency</h4></a>
+							<p>
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="single-facilities">
+							<span class="lnr lnr-bug"></span>
+							<a href="#"><h4>Intensive Care</h4></a>
+							<p>
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<div class="single-facilities">
+							<span class="lnr lnr-users"></span>
+							<a href="#"><h4>Family Planning</h4></a>
+							<p>
+								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+
+		<section class="team-area section-gap" id="cuidadores">
+			<div class="container">
+				<div class="row d-flex justify-content-center">
+					<div class="menu-content pb-70 col-lg-7">
+						<div class="title text-center">
+							<h1 class="mb-10">Últimos Cuidadores Cadastrados</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-center d-flex align-items-center">
+					<div class="col-lg-3 col-md-6 single-team">
+						<div class="thumb">
+							<img class="img-fluid" src="img/t1.jpg" alt="">
+							<div class="align-items-end justify-content-center d-flex">
+								<div class="social-links">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+									<a href="#"><i class="fa fa-behance"></i></a>
+								</div>
+								<p>
+									inappropriate behavior
+								</p>
+								<h4>Andy Florence</h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 single-team">
+						<div class="thumb">
+							<img class="img-fluid" src="img/t2.jpg" alt="">
+							<div class="align-items-end justify-content-center d-flex">
+								<div class="social-links">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+									<a href="#"><i class="fa fa-behance"></i></a>
+								</div>
+								<p>
+									inappropriate behavior
+								</p>
+								<h4>Andy Florence</h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 single-team">
+						<div class="thumb">
+							<img class="img-fluid" src="img/t3.jpg" alt="">
+							<div class="align-items-end justify-content-center d-flex">
+								<div class="social-links">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+									<a href="#"><i class="fa fa-behance"></i></a>
+								</div>
+								<p>
+									inappropriate behavior
+								</p>
+								<h4>Andy Florence</h4>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 single-team">
+						<div class="thumb">
+							<img class="img-fluid" src="img/t4.jpg" alt="">
+							<div class="align-items-end justify-content-center d-flex">
+								<div class="social-links">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+									<a href="#"><i class="fa fa-behance"></i></a>
+								</div>
+								<p>
+									inappropriate behavior
+								</p>
+								<h4>Andy Florence</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		
+
+
+		<footer class="footer-area section-gap" id="contato">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2  col-md-6">
+						<div class="single-footer-widget">
+							
+						</div>
+					</div>
+					<div class="col-lg-4  col-md-6">
+						<div class="single-footer-widget mail-chimp">
+							<h6 class="mb-20">Contate-nos</h6>
+							<p>
+								Avenida Luandry Liare, 958 - XL
+							</p>
+							<h3>011 99999-9999</h3>
+							<h3>011 3245-8978</h3>
+						</div>
+					</div>
+					<div class="col-lg-6  col-md-12">
+						<div class="single-footer-widget newsletter">
+							<h6>Newsletter</h6>
+							<p>Receba notícias de novos cuidadores cadastrados.</p>
+							<div id="mc_embed_signup">
+								
+									<div class="form-group row" style="width: 100%">
+										<div class="col-lg-8 col-md-12">
+											<input name="EMAIL" placeholder="Insira se e-mail aqui" type="email">
+										</div>
+										<div class="col-lg-4 col-md-12">
+											<button class="primary-btn">Inscrever<span class="lnr lnr-arrow-right"></span></button>
+										</div>
+									</div>
+									<div class="info"></div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row footer-bottom d-flex justify-content-between">
+					
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/vendor/jquery-2.2.4.min.js" type="text/javascript"></script>
+		<script src="js/popper.min.js" type="text/javascript"></script>
+		<script src="js/vendor/bootstrap.min.js" type="text/javascript"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA" type="text/javascript"></script>
+		<script src="js/jquery-ui.js" type="text/javascript"></script>
+		<script src="js/easing.min.js" type="text/javascript"></script>
+		<script src="js/hoverIntent.js" type="text/javascript"></script>
+		<script src="js/superfish.min.js" type="text/javascript"></script>
+		<script src="js/jquery.ajaxchimp.min.js" type="text/javascript"></script>
+		<script src="js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+		<script src="js/jquery.tabs.min.js" type="text/javascript"></script>
+		<script src="js/jquery.nice-select.min.js" type="text/javascript"></script>
+		<script src="js/owl.carousel.min.js" type="text/javascript"></script>
+		<script src="js/mail-script.js" type="text/javascript"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+
+		<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13" type="text/javascript"></script>
+		@*<script type="text/javascript">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+
+			gtag('config', 'UA-23581568-13');
+		</script>*@
+
+		<nav id="mobile-nav">
+			<ul class="" style="touch-action: pan-y;" id="">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="features.html">Features</a></li>
+				<li><a href="doctors.html">Doctors</a></li>
+				<li><a href="departments.html">Departments</a></li>
+				<li class="menu-has-children">
+					<i class="lnr lnr-chevron-down"></i><a href="" class="sf-with-ul">Blog</a>
+					<ul style="display: none;">
+						<li><a href="blog-home.html">Blog Home</a></li>
+						<li><a href="blog-single.html">Blog Single</a></li>
+					</ul>
+				</li>
+				<li class="menu-has-children">
+					<i class="lnr lnr-chevron-down"></i><a href="" class="sf-with-ul">Pages</a>
+					<ul style="display: none;">
+						<li><a href="elements.html">Elements</a></li>
+						<li><a href="#">Item One</a></li>
+						<li><a href="#">Item Two</a></li>
+						<li class="menu-has-children">
+							<i class="lnr lnr-chevron-down"></i><a href="" class="sf-with-ul">Level 2 </a>
+							<ul style="display: none;">
+								<li><a href="#">Item One</a></li>
+								<li><a href="#">Item Two</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav><div id="mobile-body-overly"></div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+	</body>
+	</html>
