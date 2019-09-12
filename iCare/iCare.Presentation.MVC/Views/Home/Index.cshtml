@@ -1,6 +1,146 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model iCare.Presentation.MVC.Models.CuidadorViewModel
+
+@{
+	ViewBag.Title = "iCare - Home Page";
 	Layout = "~/Views/Shared/_Layout2.cshtml";
+}
 }
 
 
+<section class="appointment-area" id="cadastro">
+	<div class="container">
+		<div class="row justify-content-between align-items-center pb-120 appointment-wrap">
+			<div class="col-lg-5 col-md-6 appointment-left">
+				<h1>
+					Entre para o time!
+				</h1>
+				<p>
+					Faça parte da equipe de cuidadores iCare e nos ajude a prover cuidado, carinho e confiança com qualidade e segurança.
+					<b>Vagas limitadas!</b>
+				</p>
+				<ul class="time-list">
+					<li class="d-flex justify-content-between">
+						<span>Primeira Lista</span>
+						<span>01/10 - 15/10</span>
+					</li>
+					<li class="d-flex justify-content-between">
+						<span>Segunda Lista</span>
+						<span>01/11 - 15/11</span>
+					</li>
+					<li class="d-flex justify-content-between">
+						<span>Terceira Lista</span>
+						<span>01/12 - 15/12</span>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-6 col-md-6 appointment-right pt-60 pb-60" style="margin-top: 10px;">
+				@*<form class="form-wrap" action="#">
+											<h3 class="pb-20 text-center mb-30">Book an Appointment</h3>
+											<input type="text" class="form-control" name="name" placeholder="Patient Name" onfocus="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = ''" onblur="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = 'Patient Name'">
+											<input type="text" class="form-control" name="phone" placeholder="Phone " onfocus="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = ''" onblur="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = 'Phone'">
+											<input type="email" class="form-control" name="email" placeholder="Email Address" onfocus="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = ''" onblur="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = 'Email Address'">
+											<input id="datepicker1" name="dop" class="dates form-control hasDatepicker" placeholder="Date of Birth" type="text">
+											<div class="form-select" id="service-select">
+												<select style="display: none;">
+													<option data-display="">Disease Type</option>
+													<option value="1">Type One</option>
+													<option value="2">Type Two</option>
+													<option value="3">Type Three</option>
+													<option value="4">Type Four</option>
+												</select><div class="nice-select" tabindex="0"><span class="current">Disease Type</span><ul class="list"><li data-value="Disease Type" class="option selected">Disease Type</li><li data-value="1" class="option">Type One</li><li data-value="2" class="option">Type Two</li><li data-value="3" class="option">Type Three</li><li data-value="4" class="option">Type Four</li></ul></div>
+											</div>
+											<input id="datepicker2" class="dates form-control hasDatepicker" placeholder="appointment Date" type="text">
+					<textarea name="messege" class="" rows="5" placeholder="Messege" onfocus="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = ''" onblur="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = 'Messege'"></textarea>
+											<button class="primary-btn text-uppercase">Confirm Booking</button>
+										</form>*@
+
+
+
+				@using (Html.BeginForm("NovoCuidador", "Cuidador", FormMethod.Post, new { enctype = "multipart/form-data" }))
+				{
+
+
+					@Html.AntiForgeryToken()
+
+					<div class="form-horizontal">
+						<h3 class="pb-20 text-center mb-30">Novo Cuidador</h3>
+						<hr />
+						@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+						<div class="form-group">
+							@*@Html.LabelFor(model => model.nomeCuidador, htmlAttributes: new { @class = "control-label col-md-2" })*@
+							<div class="col-md-10">
+								@Html.EditorFor(model => model.nomeCuidador, new { htmlAttributes = new { @class = "form-control", @placeholder = "Seu Nome" } })
+								@Html.ValidationMessageFor(model => model.nomeCuidador, "", new { @class = "text-danger" })
+							</div>
+						</div>
+
+						<div class="form-group">
+							@*@Html.LabelFor(model => model.enderecoCuidador, htmlAttributes: new { @class = "control-label col-md-2" })*@
+							<div class="col-md-10">
+								@Html.EditorFor(model => model.enderecoCuidador, new { htmlAttributes = new { @class = "form-control", @placeholder = "Endereço Completo" } })
+								@Html.ValidationMessageFor(model => model.enderecoCuidador, "", new { @class = "text-danger" })
+							</div>
+						</div>
+
+						<div class="form-group">
+							@*@Html.LabelFor(model => model.dddCuidador, htmlAttributes: new { @class = "control-label col-md-2" })*@
+							<div class="col-md-10">
+								@Html.EditorFor(model => model.dddCuidador, new { htmlAttributes = new { @class = "form-control", @placeholder = "DDD" } })
+								@Html.ValidationMessageFor(model => model.dddCuidador, "", new { @class = "text-danger" })
+							</div>
+						</div>
+
+						<div class="form-group">
+							@*@Html.LabelFor(model => model.telefoneCuidador, htmlAttributes: new { @class = "control-label col-md-2" })*@
+							<div class="col-md-10">
+								@Html.EditorFor(model => model.telefoneCuidador, new { htmlAttributes = new { @class = "form-control", @placeholder = "Telefone" } })
+								@Html.ValidationMessageFor(model => model.telefoneCuidador, "", new { @class = "text-danger" })
+							</div>
+						</div>
+
+						<div class="form-group">
+							@Html.LabelFor(model => model.possuiReferencia, htmlAttributes: new { @class = "control-label col-md-2" })
+							<div class="col-md-10">
+								<div class="checkbox">
+									@Html.EditorFor(model => model.possuiReferencia)
+									@Html.ValidationMessageFor(model => model.possuiReferencia, "", new { @class = "text-danger" })
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							@*@Html.LabelFor(model => model.descRestricoes, htmlAttributes: new { @class = "control-label col-md-2" })*@
+							<div class="col-md-10">
+								@Html.TextAreaFor(model => model.descRestricoes, new { @class = "form-control", rows = "3", placeholder = "Descreva suas restrições" })
+								@Html.ValidationMessageFor(model => model.descRestricoes, "", new { @class = "text-danger" })
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-10">
+								@Html.TextBoxFor(model => model.arquivo, new { @id = "arquivo", @class = "form-control", @type = "file" })
+
+
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-offset-2 col-md-10">
+								<input type="submit" value="Enviar Formulário" class="btn btn-default" />
+							</div>
+						</div>
+					</div>
+				}
+
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval")
+}

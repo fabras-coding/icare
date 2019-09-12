@@ -15,6 +15,9 @@
 		<meta charset="UTF-8">
 
 		<title>iCare</title>
+		@Styles.Render("~/Content/css")
+		@Scripts.Render("~/bundles/modernizr")
+
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 		<link href="~/Content/linearicons.css" rel="stylesheet" />
 		<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
@@ -63,10 +66,9 @@
 					</div>
 					<nav id="nav-menu-container">
 						<ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
-							<li><a  href="#home">Home</a></li>
+							<li><a href="#home">Home</a></li>
 							<li><a href="#cadastro">Cadastro</a></li>
 							<li><a href="#atendimento">Atendimento</a></li>
-							<li><a href="#cuidadores">Cuidadores</a></li>
 							<li><a href="#contato">Contato</a></li>
 						</ul>
 					</nav>
@@ -95,55 +97,6 @@
 
 		@RenderBody()
 
-		<section class="appointment-area" id="cadastro">
-			<div class="container">
-				<div class="row justify-content-between align-items-center pb-120 appointment-wrap">
-					<div class="col-lg-5 col-md-6 appointment-left">
-						<h1>
-							Servicing Hours
-						</h1>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-						</p>
-						<ul class="time-list">
-							<li class="d-flex justify-content-between">
-								<span>Monday-Friday</span>
-								<span>08.00 am - 10.00 pm</span>
-							</li>
-							<li class="d-flex justify-content-between">
-								<span>Saturday</span>
-								<span>08.00 am - 10.00 pm</span>
-							</li>
-							<li class="d-flex justify-content-between">
-								<span>Sunday</span>
-								<span>08.00 am - 10.00 pm</span>
-							</li>
-						</ul>
-					</div>
-					<div class="col-lg-6 col-md-6 appointment-right pt-60 pb-60" style="margin-top: 10px;">
-						<form class="form-wrap" action="#">
-							<h3 class="pb-20 text-center mb-30">Book an Appointment</h3>
-							<input type="text" class="form-control" name="name" placeholder="Patient Name" onfocus="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = ''" onblur="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = 'Patient Name'">
-							<input type="text" class="form-control" name="phone" placeholder="Phone " onfocus="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = ''" onblur="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = 'Phone'">
-							<input type="email" class="form-control" name="email" placeholder="Email Address" onfocus="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = ''" onblur="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = 'Email Address'">
-							<input id="datepicker1" name="dop" class="dates form-control hasDatepicker" placeholder="Date of Birth" type="text">
-							<div class="form-select" id="service-select">
-								<select style="display: none;">
-									<option data-display="">Disease Type</option>
-									<option value="1">Type One</option>
-									<option value="2">Type Two</option>
-									<option value="3">Type Three</option>
-									<option value="4">Type Four</option>
-								</select><div class="nice-select" tabindex="0"><span class="current">Disease Type</span><ul class="list"><li data-value="Disease Type" class="option selected">Disease Type</li><li data-value="1" class="option">Type One</li><li data-value="2" class="option">Type Two</li><li data-value="3" class="option">Type Three</li><li data-value="4" class="option">Type Four</li></ul></div>
-							</div>
-							<input id="datepicker2" class="dates form-control hasDatepicker" placeholder="appointment Date" type="text">
-<textarea name="messege" class="" rows="5" placeholder="Messege" onfocus="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = ''" onblur="if (!window.__cfRLUnblockHandlers) return false; this.placeholder = 'Messege'"></textarea>
-							<button class="primary-btn text-uppercase">Confirm Booking</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
 
 
 		<section class="facilities-area section-gap" id="atendimento">
@@ -152,7 +105,7 @@
 					<div class="menu-content pb-70 col-lg-7">
 						<div class="title text-center">
 							<h1 class="mb-10">Atendimento</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+							<p>Sempre presente, sempre atento, para você não ficar sem cuidados!</p>
 						</div>
 					</div>
 				</div>
@@ -160,36 +113,36 @@
 					<div class="col-lg-3 col-md-6">
 						<div class="single-facilities">
 							<span class="lnr lnr-rocket"></span>
-							<a href="#"><h4>24/7 Emergency</h4></a>
+							<a href="#"><h4>Rápido 24/7 </h4></a>
 							<p>
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+								Chamou, chegou. Profissionais localizados em diversas regiões para mais rápido te atender!
 							</p>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6">
 						<div class="single-facilities">
 							<span class="lnr lnr-heart"></span>
-							<a href="#"><h4>24/7 Emergency</h4></a>
+							<a href="#"><h4>Emergências 24/7 </h4></a>
 							<p>
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+								Estamos o tempo todo alertas para uma possível emergência. E estaremos lá quando acontecer!
 							</p>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6">
 						<div class="single-facilities">
 							<span class="lnr lnr-bug"></span>
-							<a href="#"><h4>Intensive Care</h4></a>
+							<a href="#"><h4>Cuidado Intensivo</h4></a>
 							<p>
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+								Monitoramos nossos pacientes, relatamos o dia-a-dia em nossa ferramenta e muito mais! 
 							</p>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6">
 						<div class="single-facilities">
 							<span class="lnr lnr-users"></span>
-							<a href="#"><h4>Family Planning</h4></a>
+							<a href="#"><h4>Planejamento Familiar</h4></a>
 							<p>
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct women face higher conduct.
+								Se tiver um compromisso ou viagem, estaremos lá para cuidar de algum parente que precise.
 							</p>
 						</div>
 					</div>
@@ -200,7 +153,7 @@
 
 
 
-		<section class="team-area section-gap" id="cuidadores">
+		@*<section class="team-area section-gap" id="cuidadores">
 			<div class="container">
 				<div class="row d-flex justify-content-center">
 					<div class="menu-content pb-70 col-lg-7">
@@ -281,11 +234,11 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section>*@
 
 
 
-		
+
 
 
 		<footer class="footer-area section-gap" id="contato">
@@ -293,7 +246,7 @@
 				<div class="row">
 					<div class="col-lg-2  col-md-6">
 						<div class="single-footer-widget">
-							
+
 						</div>
 					</div>
 					<div class="col-lg-4  col-md-6">
@@ -311,26 +264,29 @@
 							<h6>Newsletter</h6>
 							<p>Receba notícias de novos cuidadores cadastrados.</p>
 							<div id="mc_embed_signup">
-								
-									<div class="form-group row" style="width: 100%">
-										<div class="col-lg-8 col-md-12">
-											<input name="EMAIL" placeholder="Insira se e-mail aqui" type="email">
-										</div>
-										<div class="col-lg-4 col-md-12">
-											<button class="primary-btn">Inscrever<span class="lnr lnr-arrow-right"></span></button>
-										</div>
+
+								<div class="form-group row" style="width: 100%">
+									<div class="col-lg-8 col-md-12">
+										<input name="EMAIL" placeholder="Insira se e-mail aqui" type="email">
 									</div>
-									<div class="info"></div>
-								
+									<div class="col-lg-4 col-md-12">
+										<button class="primary-btn">Inscrever<span class="lnr lnr-arrow-right"></span></button>
+									</div>
+								</div>
+								<div class="info"></div>
+
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="row footer-bottom d-flex justify-content-between">
-					
+
 				</div>
 			</div>
 		</footer>
+		@Scripts.Render("~/bundles/jquery")
+		@Scripts.Render("~/bundles/bootstrap")
+		@RenderSection("scripts", required: false)
 
 		<script src="js/vendor/jquery-2.2.4.min.js" type="text/javascript"></script>
 		<script src="js/popper.min.js" type="text/javascript"></script>

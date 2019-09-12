@@ -33,5 +33,9 @@ namespace iCare.Presentation.MVC.Models
 		[Required]
 		[Display(Name = "Restrições")]
 		public string descRestricoes { get; set; }
+
+		public HttpPostedFileBase arquivo { get; set; }
+
+		public byte[] imagemCuidador { get; set; }
 	}
 }

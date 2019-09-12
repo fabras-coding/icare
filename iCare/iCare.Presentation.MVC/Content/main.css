@@ -2477,6 +2477,7 @@ body.mobile-nav-active {
 .banner-area {
 	background: url(img/hero-bg.jpg) right;
 	background-size: cover;
+	margin-top:-8px;
 }
 
 	.banner-area .overlay-bg {

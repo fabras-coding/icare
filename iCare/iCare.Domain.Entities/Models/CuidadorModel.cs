@@ -33,6 +33,9 @@ namespace iCare.Domain.Entities.Models
 		[Column("DS_RESTRICOES")]
 		public string descRestricoes{ get; set; }
 
+		[Column("IMAGEM_CUIDADOR")]
+		public byte[] imagemCuidador { get; set; }
+
 
 	}
 }

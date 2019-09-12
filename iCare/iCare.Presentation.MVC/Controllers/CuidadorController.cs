@@ -3,6 +3,7 @@ using iCare.Infrastructure.Data;
 using iCare.Presentation.MVC.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -23,18 +24,25 @@ namespace iCare.Presentation.MVC.Controllers
 			this.cuidadorBussines = new Application.Core.Business.Cuidador();
 			this._uow = uow;
 		}
-		public ActionResult NovoCuidador()
-        {
-            return View();
-        }
+	
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public ActionResult NovoCuidador(CuidadorViewModel cuidador)
 		{
+
+			if (Request.Files.Count > 0)
+			{
+				var ms = new MemoryStream();
+				Request.Files[0].InputStream.CopyTo(ms);
+
+				cuidador.imagemCuidador = ms.ToArray();
+			}
+
 			int idCuidador = cuidadorBussines.NovoCuidador(AutoMapper.Mapper.Map<CuidadorViewModel, CuidadorModel>(cuidador), _uow);
 
-			return View();
+
+			return RedirectToAction("Index",  "Home", null);
 		}
 
     }
