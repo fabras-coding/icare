@@ -36,6 +36,10 @@ namespace iCare.Domain.Entities.Models
 		[Column("IMAGEM_CUIDADOR")]
 		public byte[] imagemCuidador { get; set; }
 
+		[Column("DT_CADASTRO")]
+		public DateTime? dtCadastro{ get; set; }
+
+		//public virtual ReferenciaCuidadorModel ReferenciaCuidador { get; set; }
 
 	}
 }

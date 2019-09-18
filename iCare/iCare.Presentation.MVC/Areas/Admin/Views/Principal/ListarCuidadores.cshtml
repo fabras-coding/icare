@@ -1,0 +1,64 @@
+﻿@model IEnumerable<iCare.Presentation.MVC.Models.CuidadorViewModel>
+
+@{
+    ViewBag.Title = "ListarCuidadores";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ListarCuidadores</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nomeCuidador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.enderecoCuidador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dddCuidador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefoneCuidador)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.possuiReferencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descRestricoes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nomeCuidador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.enderecoCuidador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dddCuidador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefoneCuidador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.possuiReferencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descRestricoes)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

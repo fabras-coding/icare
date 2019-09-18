@@ -18,7 +18,7 @@ namespace iCare.Domain.Entities.Models
 		[Column("NM_REFERENCIA")]
 		public string nomeReferencia{ get; set; }
 
-		[Column("NM_CONTATO_REFERENCIA")]
+		[Column("NM_CONTATO_REFERENCIA1")]
 		public string contatoReferencia{ get; set; }
 
 		[Column("ID_CUIDADOR")]

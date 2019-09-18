@@ -62,74 +62,91 @@
 
 					@Html.AntiForgeryToken()
 
-					<div class="form-horizontal">
-						<h3 class="pb-20 text-center mb-30">Novo Cuidador</h3>
-						<hr />
-						@Html.ValidationSummary(true, "", new { @class = "text-danger" })
-						<div class="form-group">
-							@*@Html.LabelFor(model => model.nomeCuidador, htmlAttributes: new { @class = "control-label col-md-2" })*@
-							<div class="col-md-10">
-								@Html.EditorFor(model => model.nomeCuidador, new { htmlAttributes = new { @class = "form-control", @placeholder = "Seu Nome" } })
-								@Html.ValidationMessageFor(model => model.nomeCuidador, "", new { @class = "text-danger" })
-							</div>
+				<div class="form-horizontal">
+					<h3 class="pb-20 text-center mb-30">Novo Cuidador</h3>
+					<hr />
+					@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+					<div class="form-group">
+						@*@Html.LabelFor(model => model.nomeCuidador, htmlAttributes: new { @class = "control-label col-md-2" })*@
+						<div class="col-md-10">
+							@Html.EditorFor(model => model.nomeCuidador, new { htmlAttributes = new { @class = "form-control", @placeholder = "Seu Nome" } })
+							@Html.ValidationMessageFor(model => model.nomeCuidador, "", new { @class = "text-danger" })
 						</div>
+					</div>
 
-						<div class="form-group">
-							@*@Html.LabelFor(model => model.enderecoCuidador, htmlAttributes: new { @class = "control-label col-md-2" })*@
-							<div class="col-md-10">
-								@Html.EditorFor(model => model.enderecoCuidador, new { htmlAttributes = new { @class = "form-control", @placeholder = "Endereço Completo" } })
-								@Html.ValidationMessageFor(model => model.enderecoCuidador, "", new { @class = "text-danger" })
-							</div>
+					<div class="form-group">
+						@*@Html.LabelFor(model => model.enderecoCuidador, htmlAttributes: new { @class = "control-label col-md-2" })*@
+						<div class="col-md-10">
+							@Html.EditorFor(model => model.enderecoCuidador, new { htmlAttributes = new { @class = "form-control", @placeholder = "Endereço Completo" } })
+							@Html.ValidationMessageFor(model => model.enderecoCuidador, "", new { @class = "text-danger" })
 						</div>
+					</div>
 
-						<div class="form-group">
-							@*@Html.LabelFor(model => model.dddCuidador, htmlAttributes: new { @class = "control-label col-md-2" })*@
-							<div class="col-md-10">
-								@Html.EditorFor(model => model.dddCuidador, new { htmlAttributes = new { @class = "form-control", @placeholder = "DDD" } })
-								@Html.ValidationMessageFor(model => model.dddCuidador, "", new { @class = "text-danger" })
-							</div>
+					<div class="form-group">
+						@*@Html.LabelFor(model => model.dddCuidador, htmlAttributes: new { @class = "control-label col-md-2" })*@
+						<div class="col-md-10">
+							@Html.EditorFor(model => model.dddCuidador, new { htmlAttributes = new { @class = "form-control", @placeholder = "DDD" } })
+							@Html.ValidationMessageFor(model => model.dddCuidador, "", new { @class = "text-danger" })
 						</div>
+					</div>
 
-						<div class="form-group">
-							@*@Html.LabelFor(model => model.telefoneCuidador, htmlAttributes: new { @class = "control-label col-md-2" })*@
-							<div class="col-md-10">
-								@Html.EditorFor(model => model.telefoneCuidador, new { htmlAttributes = new { @class = "form-control", @placeholder = "Telefone" } })
-								@Html.ValidationMessageFor(model => model.telefoneCuidador, "", new { @class = "text-danger" })
-							</div>
+					<div class="form-group">
+						@*@Html.LabelFor(model => model.telefoneCuidador, htmlAttributes: new { @class = "control-label col-md-2" })*@
+						<div class="col-md-10">
+							@Html.EditorFor(model => model.telefoneCuidador, new { htmlAttributes = new { @class = "form-control", @placeholder = "Telefone" } })
+							@Html.ValidationMessageFor(model => model.telefoneCuidador, "", new { @class = "text-danger" })
 						</div>
+					</div>
 
-						<div class="form-group">
-							@Html.LabelFor(model => model.possuiReferencia, htmlAttributes: new { @class = "control-label col-md-2" })
-							<div class="col-md-10">
-								<div class="checkbox">
-									@Html.EditorFor(model => model.possuiReferencia)
-									@Html.ValidationMessageFor(model => model.possuiReferencia, "", new { @class = "text-danger" })
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							@*@Html.LabelFor(model => model.descRestricoes, htmlAttributes: new { @class = "control-label col-md-2" })*@
-							<div class="col-md-10">
-								@Html.TextAreaFor(model => model.descRestricoes, new { @class = "form-control", rows = "3", placeholder = "Descreva suas restrições" })
-								@Html.ValidationMessageFor(model => model.descRestricoes, "", new { @class = "text-danger" })
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-md-10">
-								@Html.TextBoxFor(model => model.arquivo, new { @id = "arquivo", @class = "form-control", @type = "file" })
-
-
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-md-offset-2 col-md-10">
-								<input type="submit" value="Enviar Formulário" class="btn btn-default" />
+					<div class="form-group">
+						@Html.LabelFor(model => model.possuiReferencia, htmlAttributes: new { @class = "control-label col-md-2" })
+						<div class="col-md-10">
+							<div class="checkbox">
+								@Html.EditorFor(model => model.possuiReferencia)
+								@Html.ValidationMessageFor(model => model.possuiReferencia, "", new { @class = "text-danger" })
 							</div>
 						</div>
 					</div>
+
+					<div id="referencias" style="display: none">
+						<div class="form-group">
+							<div class="col-md-10">
+								@Html.EditorFor(model => model.Referencia.nomeReferencia, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nome da Referência" } })
+								@Html.ValidationMessageFor(model => model.Referencia.nomeReferencia, "", new { @class = "text-danger" })
+							</div>
+						</div>
+						<div class="form-group">
+
+							<div class="col-md-10">
+								@Html.EditorFor(model => model.Referencia.contatoReferencia, new { htmlAttributes = new { @class = "form-control", @placeholder = "Email ou Celular da referência" } })
+								@Html.ValidationMessageFor(model => model.Referencia.contatoReferencia, "", new { @class = "text-danger" })
+							</div>
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						@*@Html.LabelFor(model => model.descRestricoes, htmlAttributes: new { @class = "control-label col-md-2" })*@
+						<div class="col-md-10">
+							@Html.TextAreaFor(model => model.descRestricoes, new { @class = "form-control", rows = "3", placeholder = "Descreva suas restrições" })
+							@Html.ValidationMessageFor(model => model.descRestricoes, "", new { @class = "text-danger" })
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-md-10">
+							@Html.TextBoxFor(model => model.arquivo, new { @id = "arquivo", @class = "form-control", @type = "file" })
+
+
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-md-offset-2 col-md-10">
+							<input type="submit" value="Enviar Formulário" class="btn btn-default" />
+						</div>
+					</div>
+				</div>
 				}
 
 			</div>

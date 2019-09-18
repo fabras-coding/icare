@@ -37,5 +37,7 @@ namespace iCare.Presentation.MVC.Models
 		public HttpPostedFileBase arquivo { get; set; }
 
 		public byte[] imagemCuidador { get; set; }
+
+		public virtual ReferenciaViewModel Referencia {get;set;}
 	}
 }

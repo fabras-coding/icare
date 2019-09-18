@@ -1,5 +1,6 @@
 ﻿using iCare.Domain.Entities.Models;
 using iCare.Infrastructure.Data;
+using iCare.Infrastructure.Data.Uow;
 using iCare.Presentation.MVC.Models;
 using System;
 using System.Collections.Generic;
@@ -14,12 +15,18 @@ namespace iCare.Presentation.MVC.Controllers
     public class CuidadorController : Controller
     {
 
-		IUnitOfWork _uow;
+		UnitOfWork _uow;
 		private Application.Core.Business.Cuidador cuidadorBussines;
 
 		public object Alert { get; private set; }
 
-		public CuidadorController(IUnitOfWork uow)
+		public CuidadorController()
+		{
+			this._uow = new UnitOfWork();
+			this.cuidadorBussines = new Application.Core.Business.Cuidador();
+	
+		}
+		public CuidadorController(UnitOfWork uow)
 		{
 			this.cuidadorBussines = new Application.Core.Business.Cuidador();
 			this._uow = uow;
@@ -39,7 +46,7 @@ namespace iCare.Presentation.MVC.Controllers
 				cuidador.imagemCuidador = ms.ToArray();
 			}
 
-			int idCuidador = cuidadorBussines.NovoCuidador(AutoMapper.Mapper.Map<CuidadorViewModel, CuidadorModel>(cuidador), _uow);
+			int idCuidador = cuidadorBussines.NovoCuidador(AutoMapper.Mapper.Map<CuidadorViewModel, CuidadorModel>(cuidador), cuidador.Referencia.nomeReferencia, cuidador.Referencia.contatoReferencia, _uow);
 
 
 			return RedirectToAction("Index",  "Home", null);

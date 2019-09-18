@@ -13,6 +13,7 @@ namespace iCare.Presentation.MVC.Mapper
 		protected override void Configure()
 		{
 			AutoMapper.Mapper.CreateMap<CuidadorModel, CuidadorViewModel>();
+			AutoMapper.Mapper.CreateMap<ReferenciaCuidadorModel, ReferenciaViewModel>();
 		}
 	}
 }
