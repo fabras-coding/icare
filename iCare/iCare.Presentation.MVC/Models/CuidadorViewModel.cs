@@ -8,6 +8,7 @@ namespace iCare.Presentation.MVC.Models
 {
 	public class CuidadorViewModel
 	{
+		public int idCuidador { get; set; }
 
 		[Required]
 		[Display(Name = "Nome Cuidador")]
@@ -38,6 +39,11 @@ namespace iCare.Presentation.MVC.Models
 
 		public byte[] imagemCuidador { get; set; }
 
-		public virtual ReferenciaViewModel Referencia {get;set;}
+		public virtual ReferenciaViewModel Referencia { get; set; }
+
+
+		public string nomeReferencia { get; set; }
+		public string contatoReferencia { get; set; }
+
 	}
 }

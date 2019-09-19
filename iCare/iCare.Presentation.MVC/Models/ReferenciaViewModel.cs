@@ -9,6 +9,7 @@ namespace iCare.Presentation.MVC.Models
 {
 	public class ReferenciaViewModel
 	{
+		public  int idReferencia{ get; set; }
 
 		[Display(Name = "Nome Referência")]
 		public string nomeReferencia { get; set; }

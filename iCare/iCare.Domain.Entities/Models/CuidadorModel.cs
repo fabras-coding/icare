@@ -39,7 +39,9 @@ namespace iCare.Domain.Entities.Models
 		[Column("DT_CADASTRO")]
 		public DateTime? dtCadastro{ get; set; }
 
-		//public virtual ReferenciaCuidadorModel ReferenciaCuidador { get; set; }
+		[ForeignKey("idCuidador")]
+		public virtual ReferenciaCuidadorModel Referencia { get; set; }
 
+		//public virtual ReferenciaCuidadorModel Referencia { get; set; }
 	}
 }

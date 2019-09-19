@@ -1,64 +1,97 @@
 ﻿@model IEnumerable<iCare.Presentation.MVC.Models.CuidadorViewModel>
 
 @{
-    ViewBag.Title = "ListarCuidadores";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.Title = "ListarCuidadores";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>ListarCuidadores</h2>
+<h2>Lista de Cuidadores</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.nomeCuidador)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.enderecoCuidador)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.dddCuidador)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.telefoneCuidador)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.possuiReferencia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.descRestricoes)
-        </th>
-        <th></th>
-    </tr>
+	<tr>
+		<th>
+			@Html.DisplayNameFor(model => model.nomeCuidador)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.enderecoCuidador)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.dddCuidador)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.telefoneCuidador)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.possuiReferencia)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.descRestricoes)
+		</th>
+		<th></th>
+	</tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.nomeCuidador)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.enderecoCuidador)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.dddCuidador)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.telefoneCuidador)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.possuiReferencia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.descRestricoes)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.nomeCuidador)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.enderecoCuidador)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.dddCuidador)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.telefoneCuidador)
+			</td>
+			<td>
+				@if (item.possuiReferencia && item.Referencia != null)
+				{
+
+					@Html.DisplayFor(modelItem => item.possuiReferencia) <a href="#" onclick="alert('Nome: ' + '@item.Referencia.nomeReferencia' + '\nContato: ' + '@item.Referencia.contatoReferencia' )">Visualizar </a>
+
+
+				}
+				else
+				{
+					@Html.DisplayFor(modelItem => item.possuiReferencia)
+
+				}
+
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.descRestricoes)
+			</td>
+			@if (item.imagemCuidador != null)
+			{
+				var baseArray = @Convert.ToBase64String(item.imagemCuidador);
+
+				<td>
+					<a href="" onclick="MostrarFoto('@baseArray')">Ver Foto</a>
+				</td>
+			}
+
+		</tr>
+	}
 
 </table>
+
+<div class="modal fade" id="modalFoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Imagem</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div id="bodymodalFoto" class="modal-body">
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+			</div>
+		</div>
+	</div>
+</div>

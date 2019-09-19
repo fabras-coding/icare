@@ -24,8 +24,8 @@ namespace iCare.Domain.Entities.Models
 		[Column("ID_CUIDADOR")]
 		public int idCuidador{ get; set; }
 
-		[ForeignKey("idCuidador")]
-		public virtual CuidadorModel cuidador { get; set; }
+		//[ForeignKey("idCuidador")]
+		//public virtual CuidadorModel cuidador { get; set; }
 
 	}
 }

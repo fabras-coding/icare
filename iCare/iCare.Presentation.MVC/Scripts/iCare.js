@@ -12,3 +12,11 @@
 
 
 });
+
+function MostrarFoto(src) {
+
+	alert(src);
+	$("#bodymodalFoto").html("<img src='data:image/png;base64,"+src+"  />");
+	$("#bodymodalFoto").modal("show");
+
+}
