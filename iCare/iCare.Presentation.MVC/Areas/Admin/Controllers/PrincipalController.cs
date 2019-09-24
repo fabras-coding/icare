@@ -23,6 +23,7 @@ namespace iCare.Presentation.MVC.Areas.Admin.Controllers
         {
 
 			var cuidadores = AutoMapper.Mapper.Map<List<CuidadorModel>, List<CuidadorViewModel>>(uow.CuidadorRepository.GetAll().ToList());
+
 			cuidadores.ForEach(x => {
 				x.Referencia = AutoMapper.Mapper.Map<ReferenciaCuidadorModel, ReferenciaViewModel>(uow.ReferenciaCuidadorRepository.FindBy(c => c.idCuidador == x.idCuidador).FirstOrDefault());
 			});

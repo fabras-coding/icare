@@ -17,16 +17,21 @@ namespace iCare.Application.Core.Business
 
 			try
 			{
+				var cuidadort = new CuidadorModel() {dddCuidador=cuidadorModel.dddCuidador, descRestricoes= cuidadorModel.descRestricoes, dtCadastro= DateTime.Now, enderecoCuidador = cuidadorModel.enderecoCuidador,
+				imagemCuidador = cuidadorModel.imagemCuidador, nomeCuidador=cuidadorModel.nomeCuidador, possuiReferencia=cuidadorModel.possuiReferencia, telefoneCuidador= cuidadorModel.telefoneCuidador};
 
 				uow.CuidadorRepository.Insert(cuidadorModel);
+
 				uow.ReferenciaCuidadorRepository.Insert(new ReferenciaCuidadorModel()
 				{
-					idCuidador = cuidadorModel.idCuidador,
+					idCuidador = cuidadort.idCuidador,
 					contatoReferencia = contatoRef,
 					nomeReferencia = nomeRef
 				});
+
 				uow.Commit();
-				return cuidadorModel.idCuidador; ;
+
+				return cuidadort.idCuidador ;
 
 
 			}

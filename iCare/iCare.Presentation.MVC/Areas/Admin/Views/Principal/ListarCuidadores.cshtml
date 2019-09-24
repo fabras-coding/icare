@@ -49,7 +49,7 @@
 				@if (item.possuiReferencia && item.Referencia != null)
 				{
 
-					@Html.DisplayFor(modelItem => item.possuiReferencia) <a href="#" onclick="alert('Nome: ' + '@item.Referencia.nomeReferencia' + '\nContato: ' + '@item.Referencia.contatoReferencia' )">Visualizar </a>
+					@Html.DisplayFor(modelItem => item.possuiReferencia) <a href="#" onclick="ExibirReferencia('@item.Referencia.nomeReferencia', '@item.Referencia.contatoReferencia')";>Visualizar </a>
 
 
 				}
@@ -68,7 +68,7 @@
 				var baseArray = @Convert.ToBase64String(item.imagemCuidador);
 
 				<td>
-					<a href="" onclick="MostrarFoto('@baseArray')">Ver Foto</a>
+					<a href="#" onclick="MostrarFoto('@baseArray');">Ver Foto</a>
 				</td>
 			}
 
@@ -78,15 +78,15 @@
 </table>
 
 <div class="modal fade" id="modalFoto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
+	<div class="modal-dialog modal-lg " role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">Imagem</h5>
+				<h5 class="modal-title" id="exampleModalLabel"></h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<div id="bodymodalFoto" class="modal-body">
+			<div id="bodymodalFoto" class="modal-body" style="text-align:center">
 
 			</div>
 			<div class="modal-footer">
