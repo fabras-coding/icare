@@ -1,0 +1,14 @@
+E:\Consulweb\git fudido\iCare\iCare\iCare.Infrastructure.Data\bin\Release\iCare.Infrastructure.Data.dll.config
+E:\Consulweb\git fudido\iCare\iCare\iCare.Infrastructure.Data\bin\Release\iCare.Infrastructure.Data.dll
+E:\Consulweb\git fudido\iCare\iCare\iCare.Infrastructure.Data\bin\Release\iCare.Infrastructure.Data.pdb
+E:\Consulweb\git fudido\iCare\iCare\iCare.Infrastructure.Data\bin\Release\EntityFramework.dll
+E:\Consulweb\git fudido\iCare\iCare\iCare.Infrastructure.Data\bin\Release\EntityFramework.SqlServer.dll
+E:\Consulweb\git fudido\iCare\iCare\iCare.Infrastructure.Data\bin\Release\iCare.Domain.Entities.dll
+E:\Consulweb\git fudido\iCare\iCare\iCare.Infrastructure.Data\bin\Release\iCare.Domain.Entities.pdb
+E:\Consulweb\git fudido\iCare\iCare\iCare.Infrastructure.Data\bin\Release\EntityFramework.xml
+E:\Consulweb\git fudido\iCare\iCare\iCare.Infrastructure.Data\bin\Release\EntityFramework.SqlServer.xml
+E:\Consulweb\git fudido\iCare\iCare\iCare.Infrastructure.Data\obj\Release\iCare.Infrastructure.Data.csprojAssemblyReference.cache
+E:\Consulweb\git fudido\iCare\iCare\iCare.Infrastructure.Data\obj\Release\iCare.Infrastructure.Data.csproj.CoreCompileInputs.cache
+E:\Consulweb\git fudido\iCare\iCare\iCare.Infrastructure.Data\obj\Release\iCare.Infrastructure.Data.csproj.CopyComplete
+E:\Consulweb\git fudido\iCare\iCare\iCare.Infrastructure.Data\obj\Release\iCare.Infrastructure.Data.dll
+E:\Consulweb\git fudido\iCare\iCare\iCare.Infrastructure.Data\obj\Release\iCare.Infrastructure.Data.pdb

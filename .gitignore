@@ -18,3 +18,6 @@
 /iCare/iCare.Presentation.MVC/obj
 /.vs
 /iCare/iCare.Presentation.MVC/App_Data
+/iCare/iCare.Application.Core/bin/Release
+/iCare/iCare.Domain.Entities/bin/Release
+/iCare/iCare.Infrastructure.Data/bin/Release
